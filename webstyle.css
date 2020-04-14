@@ -1,0 +1,69 @@
+body{
+    background-color:gray;
+}
+
+.scena {
+    width:200px;
+    height:200px;
+    margin:auto;
+    margin-top:200px;
+    perspective:1000px;
+    position:relative;
+}
+
+.kostka{
+    position:absolute;
+    transform-style: preserve-3d;
+    width:100%;
+    height:100%;
+    animation: obracanie_kostki 40s infinite alternate;
+}
+
+.sciana{
+    position:absolute;
+    line-height:200px;
+    font-size:60px;
+    color:white;
+    text-align:center;
+    width:100%;
+    height:100%;
+    opacity:0.6;
+}
+
+div.face{
+    background-color:red;
+    transform: translateZ(100px);
+}
+div.back{
+    background-color:blue;
+    transform: rotateX(180deg) translateZ(100px);
+}
+div.left{
+    background-color:yellow;
+    transform: rotateY(-90deg) translateZ(100px);
+
+}
+div.right{
+    background-color:green;
+    transform: rotateY(90deg) translateZ(100px);
+}
+div.top{
+    background-color:black;
+    transform: rotateX(-90deg) translateZ(100px);
+}
+div.bottom{
+    background-color:orange;
+    transform: rotateX(90deg) translateZ(100px);
+    
+}
+
+@keyframes obracanie_kostki {
+
+    from 
+    {
+    }
+    to 
+    {
+        transform: rotateY(360deg) rotateX(445deg);
+    }
+}
